@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/modificar-incidencia.css">
+        <title>Administración de Medios Tecnológicos Portátiles</title>
+    </head>
+
+<body>
+    
+    <header class="hero">
+
+        <div class="hero__logo">
+            <figure class="logo__picture">
+                <img src="resources/Sin título-8.1.png" class="logo__img">
+            </figure>
+            <p class="logo__tittle">ADMINETP</p>
+        </div>
+
+        <div class="hero__links">
+            
+            <div class="link ">
+                <a id="link_inicio" class="link__text">Inicio</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_crearRegistro" class="link__text">Crear Registro Personal</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verRegistros" class="link__text">Ver Registros</a>
+            </div>
+
+            <div class="link link--active">
+                <a id="link_verIncidencias" class="link__text">Ver Incidencias</a>
+            </div>
+
+            <div class="link link--hidden link--menu">
+                <a class="link__text">Administrar Privilegios<img src="resources/arrow-left.svg" class="link__img"></a>
+                <ul class="link__submenu">
+                    <li id="asignarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Asignar Privilegio</a>
+                    </li>
+                    <li id="quitarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Quitar Privilegio</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_validarPlanillas" class="link__text">Validar Planillas</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_crearIncidencia" class="link__text">Crear Incidencia</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_escanearSolapines" class="link__text">Chequear Entrada</a>
+            </div>
+
+        </div>
+
+        <div id="hero__user__container" class="hero__user__container">
+            
+            <div class="hero__user">
+
+                <div class="user__description">
+                    <p class="user__name">carlosjo</p>
+                    <p class="user__rol">Supervisor</p>
+                </div>
+                
+                <figure class="user__picture">
+                    <img src="resources/user.svg" class="user__img">
+                </figure>
+
+            </div>
+            
+            
+        </div>
+
+    </header>
+
+    <header class="root">
+
+        <p class="root__name">Principal</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Ver Incidencias</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Modificar Incidencia</p>
+        
+    </header>
+
+    <main class="main">
+
+        <section class="section__description">
+
+            <p class="description__tittle">MODIFICAR INCIDENCIA</p>
+            <p class="description__paragraph">
+                Modifique todos los datos requeridos por usted. Tenga en cuenta hay campos no editables.
+            </p>
+
+            <section class="date">
+
+                <div class="date__container">
+                    <p class="date__lbl">HORA</p>
+                    <p class="date__ent">1:46 AM</p>
+                    <p class="date__lbl">FECHA</p>
+                    <p class="date__ent">24 de Noviembre de 2022</p>
+                </div>
+    
+            </section>
+
+        </section>
+
+        <!-- datos personales del custodio -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Datos personales del custodio
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">NOMBRE</p>
+                    <input type="text" disabled class="field__txt" value="Alex" style="width: 475px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">APELLIDOS</p>
+                    <input type="text" disabled class="field__txt" value="Pineda Mesa" style="width: 475px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">CARNET DE IDENTIDAD</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="00121366462" style="width: 270px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">NO. SOLAPÍN</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="E-45861" style="width: 250px;">
+                </div>
+            
+            </div>
+
+        </section>
+
+        <!-- datos del usuario implicado -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Datos del usuario implicado
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">NOMBRE</p>
+                    <input name="nombre_usuario" type="text"  class="field__txt" value="Daniel" style="width: 475px;">
+
+                    <div id="field__error__msg--nombre_usuario" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras y espacios, de 2 a 40 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">APELLIDOS</p>
+                    <input name="apellidos_usuario" type="text"  class="field__txt field__txt--spacing" value="Díaz Pardo" style="width: 475px;">
+
+                    <div id="field__error__msg--apellidos_usuario" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras y espacios, de 5 a 40 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">NO. SOLAPÍN</p>
+                    <input name="solapin_usuario" type="text"  class="field__txt field__txt--spacing" value="E-587461" style="width: 25s0px;">
+
+                    <div id="field__error__msg--solapin_usuario" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras, números y guión medio, con el formato (E-456132).</p>
+                    </div>
+                </div>
+            
+            </div>
+
+        </section>
+
+        <!-- Motivo -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Motivo
+            </p>
+
+            <div class="panel__fields">
+
+                <textarea name="motivo"  id="motivo" class="textarea__motive">El estudiante intentó sacar una laptop por la puerta principal sin llevar el documento de acreditación para la extracción del medio tecnológico portátil. Se detuvo su paso, se le mando a regresar a la unvieridad y a buscar el mismo.</textarea>
+                
+                <div id="field__error__msg--motivo" class="field__error__msg field__error__msg--hidden">
+                    <p class="error__msg">Solo se admiten letras y espacios, de 3 a 30 caracteres.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- botones -->
+
+        <section class="buttons">
+            
+            <a id="btn_cancel" class="button__cancel">Cancelar</a>
+            <a id="btn_success" class="button__success">Aplicar Cambios</a>
+
+        </section>
+
+    </main> 
+
+    <section id="panel__alert" class="panel__alert">
+        <p class="alert__text">Hay campos no válidos, por favor verifique los datos.</p>
+    </section>
+
+
+    <footer class="footer">
+    
+        <div class="footer__container container">
+
+            <div class="footer__description__left">
+                
+                <div class="footer__logo">
+                    
+                    <figure class="footer__logo__picture">
+                        <img src="resources/Sin título-8.1.png" class="logo__adminetp">
+                    </figure>
+
+                    <h1 class="footer__logo__title">ADMINETP</h1>
+                </div>
+                
+                <p class="footer__paragraph">Sistema informático desarrollado para la gestión, administración y control de la información de los Equipos Tecnológicos Portátiles de estudiantes y que acceden a la Universidad de las Ciencias Informáticas de La Habana. </p>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/phone.svg" class="footer__img">
+                    </figure>
+                    <p class="line__text">+537 835 8181</p>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/link.svg"  class="footer__img">
+                    </figure>
+                    <p class="line__text">www.uci.cu</p>
+                </div>
+
+            </div>
+            
+            <div class="footer__description__right">
+                
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/facebook.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.facebook.com/universidad.uci" class="line__text">Facebook</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/intagram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.instagram.com/universidad.uci" class="line__text">Instagram</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/twitter.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Twitter</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/linkedin.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Linkendin</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/youtube.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">YouTube</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/telegram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Telegram</a>
+                </div>
+
+                <p class="footer__uci">Universidad de las Ciencias Informáticas, La Habana, Cuba. Todos los derechos reservados.</p>
+
+            </div>
+
+        </div>
+
+        <div class="wave wave--footer"></div>
+
+    </footer>
+
+
+    <script src="js/modificar-incidencia.js"></script>
+</body>
+
+</html>

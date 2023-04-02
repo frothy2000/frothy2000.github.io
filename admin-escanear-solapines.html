@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/escanear-solapines.css">
+        <title>Administración de Medios Tecnológicos Portátiles</title>
+    </head>
+
+<body>
+    
+    <header class="hero">
+
+        <div class="hero__logo">
+            <figure class="logo__picture">
+                <img src="resources/Sin título-8.1.png" class="logo__img">
+            </figure>
+            <p class="logo__tittle">ADMINETP</p>
+        </div>
+
+        <div class="hero__links">
+            
+            <div class="link ">
+                <a id="link_inicio" class="link__text">Inicio</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_crearRegistro" class="link__text">Crear Registro Personal</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verRegistros" class="link__text">Ver Registros</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verIncidencias" class="link__text">Ver Incidencias</a>
+            </div>
+
+            <div class="link link--hidden link--menu">
+                <a class="link__text">Administrar Privilegios<img src="resources/arrow-left.svg" class="link__img"></a>
+                <ul class="link__submenu">
+                    <li id="asignarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Asignar Privilegio</a>
+                    </li>
+                    <li id="quitarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Quitar Privilegio</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_validarPlanillas" class="link__text">Validar Planillas</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_crearIncidencia" class="link__text">Crear Incidencia</a>
+            </div>
+
+            <div class="link link--hidden link--active">
+                <a id="link_escanearSolapines" class="link__text">Chequear Entrada</a>
+            </div>
+
+        </div>
+
+        <div id="hero__user__container" class="hero__user__container">
+            
+            <div class="hero__user">
+
+                <div class="user__description">
+                    <p class="user__name">carlosjo</p>
+                    <p class="user__rol">Supervisor</p>
+                </div>
+                
+                <figure class="user__picture">
+                    <img src="resources/user.svg" class="user__img">
+                </figure>
+
+            </div>
+            
+            
+        </div>
+
+    </header>
+
+    <header class="root">
+
+        <p class="root__name">Principal</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Escanear Solapines</p>
+        
+    </header>
+
+    <main class="main">
+
+        <section class="section__description">
+
+            <p class="description__tittle">ESCANEAR SOLAPÍN</p>
+            <p class="description__paragraph">
+                Escanee el solapín del personal para conocer sus registros de medio. Acerque el solapín al escaner y espere.
+            </p>
+
+        </section>
+
+        <!-- panel cuando no aparece ningun registro -->
+
+        <section class="empty ">
+
+            <div class="empty__container">
+                <figure class="empty__img"></figure>
+                <p class="empty__text">No se encontró ningún registro del usuario.</p>
+            </div>
+
+        </section>
+
+        <!-- cuando existe algun registro -->
+
+        <section class="section__table panel--hidden">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>NO.</th><th>NOMBRE</th><th>APELLIDOS</th><th>NO. SOLAPÍN</th><th>ÁREA</th><th>TIPO DE PERSONAL</th><th>APART.</th><th>MODALIDAD</th><th>MARCA DEL PORTÁTIL</th><th>MODELO</th><th>NO. SERIE</th><th>DIRECCIÓN FÍSICA</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    <tr class="rw">
+                        <td>1</td><td>Alejandro</td><td>Rodríguez Vazquez</td><td>E-547812</td><td>Producción XETID</td><td>Directivo</td><td>135480</td><td>Externo</td><td>Lenovo</td><td>X565DSA8W</td><td>6456484916546</td><td>AC:D8:C2:B5:F1</td>
+                    </tr>
+                    <tr class="rw">
+                        <td>1</td><td>Alejandro</td><td>Rodríguez Vazquez</td><td>E-547812</td><td>Producción XETID</td><td>Directivo</td><td>135480</td><td>Externo</td><td>Lenovo</td><td>X565DSA8W</td><td>6456484916546</td><td>AC:D8:C2:B5:F1</td>
+                    </tr>
+                    <tr class="rw">
+                        <td>1</td><td>Alejandro</td><td>Rodríguez Vazquez</td><td>E-547812</td><td>Producción XETID</td><td>Directivo</td><td>135480</td><td>Externo</td><td>Lenovo</td><td>X565DSA8W</td><td>6456484916546</td><td>AC:D8:C2:B5:F1</td>
+                    </tr>
+                    <tr class="rw">
+                        <td>1</td><td>Alejandro</td><td>Rodríguez Vazquez</td><td>E-547812</td><td>Producción XETID</td><td>Directivo</td><td>135480</td><td>Externo</td><td>Lenovo</td><td>X565DSA8W</td><td>6456484916546</td><td>AC:D8:C2:B5:F1</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+
+
+    </main> 
+
+    <footer class="footer">
+    
+        <div class="footer__container container">
+
+            <div class="footer__description__left">
+                
+                <div class="footer__logo">
+                    
+                    <figure class="footer__logo__picture">
+                        <img src="resources/Sin título-8.1.png" class="logo__adminetp">
+                    </figure>
+
+                    <h1 class="footer__logo__title">ADMINETP</h1>
+                </div>
+                
+                <p class="footer__paragraph">Sistema informático desarrollado para la gestión, administración y control de la información de los Equipos Tecnológicos Portátiles de estudiantes y que acceden a la Universidad de las Ciencias Informáticas de La Habana. </p>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/phone.svg" class="footer__img">
+                    </figure>
+                    <p class="line__text">+537 835 8181</p>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/link.svg"  class="footer__img">
+                    </figure>
+                    <p class="line__text">www.uci.cu</p>
+                </div>
+
+            </div>
+            
+            <div class="footer__description__right">
+                
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/facebook.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.facebook.com/universidad.uci" class="line__text">Facebook</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/intagram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.instagram.com/universidad.uci" class="line__text">Instagram</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/twitter.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Twitter</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/linkedin.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Linkendin</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/youtube.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">YouTube</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/telegram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Telegram</a>
+                </div>
+
+                <p class="footer__uci">Universidad de las Ciencias Informáticas, La Habana, Cuba. Todos los derechos reservados.</p>
+
+            </div>
+
+        </div>
+
+        <div class="wave wave--footer"></div>
+
+    </footer>
+
+
+    <script src="js/escanear-solapines.js"></script>
+</body>
+
+</html>

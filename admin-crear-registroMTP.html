@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/admin-crear-registroMTP.css">
+    <title>Administración de Medios Tecnológicos Portátiles</title>
+</head>
+
+<body>
+    
+    <header class="hero">
+
+        <div class="hero__logo">
+            <figure class="logo__picture">
+                <img src="resources/Sin título-8.1.png" class="logo__img">
+            </figure>
+            <p class="logo__tittle">ADMINETP</p>
+        </div>
+
+        <div class="hero__links">
+            
+            <div class="link ">
+                <a id="link_inicio" class="link__text">Inicio</a>
+            </div>
+
+            <div class="link link--active">
+                <a id="link_crearRegistro" class="link__text">Crear Registro Personal</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verRegistros" class="link__text">Ver Registros</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verIncidencias" class="link__text">Ver Incidencias</a>
+            </div>
+
+            <div class="link link--hidden link--menu">
+                <a class="link__text">Administrar Privilegios<img src="resources/arrow-left.svg" class="link__img"></a>
+                <ul class="link__submenu">
+                    <li id="asignarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Asignar Privilegio</a>
+                    </li>
+                    <li id="quitarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Quitar Privilegio</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_validarPlanillas" class="link__text">Validar Planillas</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_crearIncidencia" class="link__text">Crear Incidencia</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_escanearSolapines" class="link__text">Chequear Entrada</a>
+            </div>
+            
+        </div>
+
+        <div id="hero__user__container" class="hero__user__container">
+            
+            <div class="hero__user">
+
+                <div class="user__description">
+                    <p class="user__name">carlosjo</p>
+                    <p class="user__rol">Supervisor</p>
+                </div>
+                
+                <figure class="user__picture">
+                    <img src="resources/user.svg" class="user__img">
+                </figure>
+
+            </div>
+            
+            
+        </div>
+
+    </header>
+
+    <header class="root">
+
+        <p class="root__name">Principal</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Crear Registro Personal</p>
+
+    </header>
+
+    <main class="main">
+
+        <section class="section__description">
+
+            <p class="description__tittle">CREAR REGISTRO</p>
+            <p class="description__paragraph">
+                Ingrese todos los datos de manera correcta para crear el Registro de su Laptop. Los datos ya rellenados son seleccionados automáticamente de su usuario del dominio UCI. Las características del equipo son obtenidas mediante su conexión a la red.
+            </p>
+
+        </section>
+
+        <!-- datos personales y laborales -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Datos personales y laborales
+            </p>
+
+            <p class="panel__description">
+                Ingrese su número de solapín para autocompletar su información personal solicitada, o ingresela de manera manual. 
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">NOMBRE</p>
+                    <input name="nombre" type="text" class="field__txt" value="" style="width: 475px;">
+
+                    <div id="field__error__msg--nombre" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras y espacios, de 3 a 30 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">APELLIDOS</p>
+                    <input name="apellidos" type="text" class="field__txt" value="" style="width: 475px;">
+
+                    <div id="field__error__msg--apellidos" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras y espacios, de 5 a 60 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">CARNET DE IDENTIDAD</p>
+                    <input name="ci" type="text" class="field__txt field__txt--spacing" value="" style="width: 270px;">
+
+                    <div id="field__error__msg--ci" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten números, de 11 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">NO. SOLAPÍN</p>
+                    <input name="solapin" type="text" class="field__txt field__txt--spacing" value="" style="width: 250px;">
+
+                    <div id="field__error__msg--solapin" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admite el formato (E-######)</p>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="panel__fields__2">
+
+                <div class="field">
+                    <p class="field__name">AREA</p>
+                    <input name="area" type="text" class="field__txt" value="" style="width: 475px;">
+
+                    <div id="field__error__msg--area" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras y espacios, de 4 a 100 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">TIPO DE PERSONAL</p>
+                    <select name="tipo-personal" id="tipo-personal" class="field__combobox" style="width: 475px;">
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Directivo">Directivo</option>
+                        <option value="Profesor">Profesor</option>
+                        <option value="Especialista">Especialista</option>
+                        <option value="Trabajador">Trabajador</option>
+                    </select>
+                </div>
+
+                <div class="personalInformation">
+
+                    <a href="#" class="personalInformation__btn">Buscar información personal</a>
+
+                    <div class="personalInformation__message">
+                        
+                        <figure class="message__picture">
+                            <img src="resources/info.svg" class="message__img">
+                        </figure>
+
+                        <p class="message__text">
+                            No se encotró el número de solapín ingresado en nuestra base de datos. Por favor verifique su número o ingrése los datos de forma manual.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- direccion -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Dirección
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">DIRECCIÓN</p>
+                    <input name="direccion" type="text" class="field__txt" value="" style="width: 775px;">
+
+                    <div id="field__error__msg--direccion" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten letras, números, espacios y los caracteres (% & . , - _ #), de 4 a 100 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field" id="apartamento">
+                    <p class="field__name">APARTAMENTO</p>
+                    <input  name="apartamento" type="text" class="field__txt field__txt--spacing" value="" style="width: 240px;">
+
+                    <div id="field__error__msg--apartamento" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten números, de 5 o 6 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">TELÉFONO</p>
+                    <input name="telefono" type="text" class="field__txt field__txt--spacing" value="" style="width: 240px;">
+
+                    <div id="field__error__msg--telefono" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten números telefónicos con el prefijo +537 o +535, con 11 caracteres.</p>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="panel__fields__2">
+
+                <div class="field__checkbox">
+                    <p class="field__name">MODALIDAD</p>
+                    
+                    <div class="field__checks">
+
+                        <label for="interno_rb" class="check">
+                            <input type="radio" checked name="modalidad" id="interno_rb" class="check__obj">
+                            <p class="check__lbl">Interno</p>
+                        </label>
+                        
+                        <label for="externo_rb" class="check">
+                            <input type="radio" name="modalidad" id="externo_rb" class="check__obj">
+                            <p class="check__lbl">Externo</p>
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- descripcion del medio tecnologico portatil -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Descripción del medio tecnológico portátil
+            </p>
+
+            <p class="panel__description">
+                Los campos ya rellenados son extraidos automáticamente de su conexión a la red.
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">MARCA DEL POTÁTIL</p>
+                    <input type="text" disabled class="field__txt field__txt--autodetected" value="ASUS" style="width: 365px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">MODELO DEL PORTÁTIL</p>
+                    <input type="text" disabled class="field__txt field__txt--autodetected field__txt--spacing" value="X571GT" style="width: 365px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">NO. SERIE</p>
+                    <input name="no_serie" type="text" class="field__txt field__txt--spacing" value="" style="width: 365px;">
+
+                    <div id="field__error__msg--no_serie" class="field__error__msg field__error__msg--hidden">
+                        <p class="error__msg">Solo se admiten números, de 4 a 20 caracteres.</p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">DIRECCIÓN FÍSICA</p>
+                    <input type="text" disabled class="field__txt field__txt--autodetected field__txt--spacing" value="AC:D8:C2:B5:F1" style="width: 365px;">
+                </div>
+
+                
+            </div>
+
+            <div class="tooltips__container">
+                <div class="tooltip left">
+                    <span class="tiptext">Los campos de texto que contengan este simbolo, su contenido es obtenido automáticamente</span>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- area de firmas -->
+
+        <section class="firms">
+
+            <div class="firm__container">
+
+                <figure class="firm__picture">No se ha firmado todavía</figure>
+                <p class="firm__label">FIRMA DIGITAL <br> "DIRECTOR DE SEGURIDAD Y PROTECCIÓN"</p>
+
+            </div>
+
+            <div class="firm__container" style="margin-top: -37px;">
+
+                <p id="date" class="firm__date">24 de Noviembre de 2022</p>
+                <p class="firm__label">FECHA DE CREACIÓN</p>
+
+            </div>
+
+            <div class="firm__container">
+
+                <figure class="firm__picture">No se ha firmado todavía</figure>
+                <p class="firm__label">FIRMA DIGITAL <br> "DIRECTOR DE SEGURIDAD INFORMÁTICA"</p>
+
+            </div>
+
+
+        </section>
+
+        <!-- botones -->
+
+        <section class="buttons">
+            
+            <a id="cancel" class="button__cancel">Cancelar</a>
+            <a id="success" class="button__success">Crear Registro</a>
+
+        </section>
+
+    </main> 
+
+    <section id="panel__alert" class="panel__alert">
+        <p class="alert__text">Hay campos no válidos, por favor verifique los datos.</p>
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer__container container">
+
+            <div class="footer__description__left">
+                
+                <div class="footer__logo">
+                    
+                    <figure class="footer__logo__picture">
+                        <img src="resources/Sin título-8.1.png" class="logo__adminetp">
+                    </figure>
+
+                    <h1 class="footer__logo__title">ADMINETP</h1>
+                </div>
+                
+                <p class="footer__paragraph">Sistema informático desarrollado para la gestión, administración y control de la información de los Equipos Tecnológicos Portátiles de estudiantes y que acceden a la Universidad de las Ciencias Informáticas de La Habana. </p>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/phone.svg" class="footer__img">
+                    </figure>
+                    <p class="line__text">+537 835 8181</p>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/link.svg"  class="footer__img">
+                    </figure>
+                    <p class="line__text">www.uci.cu</p>
+                </div>
+
+            </div>
+            
+            <div class="footer__description__right">
+                
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/facebook.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.facebook.com/universidad.uci" class="line__text">Facebook</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/intagram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.instagram.com/universidad.uci" class="line__text">Instagram</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/twitter.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Twitter</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/linkedin.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Linkendin</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/youtube.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">YouTube</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/telegram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Telegram</a>
+                </div>
+
+                <p class="footer__uci">Universidad de las Ciencias Informáticas, La Habana, Cuba. Todos los derechos reservados.</p>
+
+            </div>
+
+        </div>
+
+        <div class="wave wave--footer"></div>
+
+    </footer>
+
+    <script src="js/admin-crear-registroMTP.js"></script>
+</body>
+
+</html>

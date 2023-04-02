@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/asignar-privilegio.css">
+        <title>Administración de Medios Tecnológicos Portátiles</title>
+    </head>
+
+<body>
+    
+    <header class="hero">
+
+        <div class="hero__logo">
+            <figure class="logo__picture">
+                <img src="resources/Sin título-8.1.png" class="logo__img">
+            </figure>
+            <p class="logo__tittle">ADMINETP</p>
+        </div>
+
+        <div class="hero__links">
+            
+            <div class="link ">
+                <a id="link_inicio" class="link__text">Inicio</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_crearRegistro" class="link__text">Crear Registro Personal</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verRegistros" class="link__text">Ver Registros</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verIncidencias" class="link__text">Ver Incidencias</a>
+            </div>
+
+            <div class="link link--active link--hidden link--menu">
+                <a class="link__text">Administrar Privilegios<img src="resources/arrow-left.svg" class="link__img"></a>
+                <ul class="link__submenu">
+                    <li id="asignarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Asignar Privilegio</a>
+                    </li>
+                    <li id="quitarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Quitar Privilegio</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_validarPlanillas" class="link__text">Validar Planillas</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_crearIncidencia" class="link__text">Crear Incidencia</a>
+            </div>
+
+        </div>
+
+        <div id="hero__user__container" class="hero__user__container">
+            
+            <div class="hero__user">
+
+                <div class="user__description">
+                    <p class="user__name">carlosjo</p>
+                    <p class="user__rol">Supervisor</p>
+                </div>
+                
+                <figure class="user__picture">
+                    <img src="resources/user.svg" class="user__img">
+                </figure>
+
+            </div>
+            
+            
+        </div>
+
+    </header>
+
+    <header class="root">
+
+        <p class="root__name">Principal</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Administrar Privilegios</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Asignar Privilegio</p>
+        
+    </header>
+
+    <main class="main">
+
+        <section class="section__description">
+
+            <p class="description__tittle">ASIGNAR PRIVILEGIO DE SUPERVISOR</p>
+            <p class="description__paragraph">
+                Ingrese un usuario del dominio UCI para asignarlo como supervisor. Tenga en cuenta que no debe poner el "@" ni el dominio.
+            </p>
+
+        </section>
+
+
+        <section class="section__panel">
+
+            <div class="panel__container">
+
+                <div class="panel__info">
+
+                    <div class="info__txt">
+
+                        <p class="label__txt">NOMBRE DEL USUARIO:</p>
+                        <input name="usuario" type="text" class="input__txt" placeholder="Usuario">
+
+                        <div id="field__error__msg--usuario" class="field__error__msg field__error__msg--hidden">
+                            <p class="error__msg">Solo se admiten letras y números, de 4 a 20 caracteres.</p>
+                        </div>
+
+                    </div>
+
+                    <div class="info__labels">
+
+                        <div class="labels__column">
+                            <p class="column__text">NOMBRE DEL USUARIO</p>
+                            <p class="column__text">SOLAPÍN</p>
+                            <p class="column__text">TIPO DE PERSONAL</p>
+                            <p class="column__text">ÁREA</p>
+                            <p class="column__text">APARTAMENTO</p>
+                            <p class="column__text">MODALIDAD</p>
+                        </div>
+
+                        <div class="labels__column">
+                            <p class="column__text column__text--desc">Alex Rodríguez Vázquez</p>
+                            <p class="column__text column__text--desc">E-5412001</p>
+                            <p class="column__text column__text--desc">Trabajador</p>
+                            <p class="column__text column__text--desc">Departamento de Seguridad Informática</p>
+                            <p class="column__text column__text--desc">14301</p>
+                            <p class="column__text column__text--desc">Interno</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="panel__lbl">
+
+                    <div class="panel__lbl__container">
+
+                        <div class="lbl__container">
+                            <figure class="lbl__img__error"></figure>
+                            <p class="lbl__usuario__error">No se encotró el usuario en nuestra base de datos, por favor revise.</p>
+                        </div>
+                        
+                        <div class="lbl__container">
+                            <figure class="lbl__img__warning"></figure>
+                            <p class="lbl__usuario__warning">El usuario ya es supervisor.</p>
+                        </div>
+
+                    </div>
+
+                    <section class="buttons">
+            
+                        <a id="btn_success" class="button__success">Asignar Privilegio</a>
+            
+                    </section>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main> 
+
+    <section id="panel__alert" class="panel__alert">
+        <p class="alert__text">Hay campos no válidos, por favor verifique los datos.</p>
+    </section>
+
+    <footer class="footer">
+    
+        <div class="footer__container container">
+
+            <div class="footer__description__left">
+                
+                <div class="footer__logo">
+                    
+                    <figure class="footer__logo__picture">
+                        <img src="resources/Sin título-8.1.png" class="logo__adminetp">
+                    </figure>
+
+                    <h1 class="footer__logo__title">ADMINETP</h1>
+                </div>
+                
+                <p class="footer__paragraph">Sistema informático desarrollado para la gestión, administración y control de la información de los Equipos Tecnológicos Portátiles de estudiantes y que acceden a la Universidad de las Ciencias Informáticas de La Habana. </p>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/phone.svg" class="footer__img">
+                    </figure>
+                    <p class="line__text">+537 835 8181</p>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/link.svg"  class="footer__img">
+                    </figure>
+                    <p class="line__text">www.uci.cu</p>
+                </div>
+
+            </div>
+            
+            <div class="footer__description__right">
+                
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/facebook.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.facebook.com/universidad.uci" class="line__text">Facebook</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/intagram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.instagram.com/universidad.uci" class="line__text">Instagram</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/twitter.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Twitter</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/linkedin.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Linkendin</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/youtube.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">YouTube</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/telegram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Telegram</a>
+                </div>
+
+                <p class="footer__uci">Universidad de las Ciencias Informáticas, La Habana, Cuba. Todos los derechos reservados.</p>
+
+            </div>
+
+        </div>
+
+        <div class="wave wave--footer"></div>
+
+    </footer>
+
+
+    <script src="js/asignar-privilegio.js"></script>
+</body>
+
+</html>

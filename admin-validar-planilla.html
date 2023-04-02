@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/validar-planillas.css">
+        <title>Administración de Medios Tecnológicos Portátiles</title>
+    </head>
+
+<body>
+    
+    <header class="hero">
+
+        <div class="hero__logo">
+            <figure class="logo__picture">
+                <img src="resources/Sin título-8.1.png" class="logo__img">
+            </figure>
+            <p class="logo__tittle">ADMINETP</p>
+        </div>
+
+        <div class="hero__links">
+            
+            <div class="link ">
+                <a id="link_inicio" class="link__text">Inicio</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_crearRegistro" class="link__text">Crear Registro Personal</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verRegistros" class="link__text">Ver Registros</a>
+            </div>
+
+            <div class="link ">
+                <a id="link_verIncidencias" class="link__text">Ver Incidencias</a>
+            </div>
+
+            <div class="link link--hidden link--menu">
+                <a class="link__text">Administrar Privilegios<img src="resources/arrow-left.svg" class="link__img"></a>
+                <ul class="link__submenu">
+                    <li id="asignarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Asignar Privilegio</a>
+                    </li>
+                    <li id="quitarPrivilegio" class="submenu__item">
+                        <a  class="item__text">Quitar Privilegio</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="link link--hidden link--active">
+                <a id="link_validarPlanillas" class="link__text">Validar Planillas</a>
+            </div>
+
+            <div class="link link--hidden">
+                <a id="link_crearIncidencia" class="link__text">Crear Incidencia</a>
+            </div>
+
+        </div>
+
+        <div id="hero__user__container" class="hero__user__container">
+            
+            <div class="hero__user">
+
+                <div class="user__description">
+                    <p class="user__name">carlosjo</p>
+                    <p class="user__rol">Supervisor</p>
+                </div>
+                
+                <figure class="user__picture">
+                    <img src="resources/user.svg" class="user__img">
+                </figure>
+
+            </div>
+            
+            
+        </div>
+
+    </header>
+
+    <header class="root">
+
+        <p class="root__name">Principal</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Administrar Privilegios</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Planillas a Validar</p>
+
+        <figure class="root__picture">
+            <img src="resources/arrow.svg" class="root__ico">
+        </figure>
+
+        <p class="root__name">Validar Registro</p>
+        
+    </header>
+
+    <main class="main">
+
+        <section class="section__description">
+
+            <p class="description__tittle">VALIDAR REGISTRO</p>
+            <p class="description__paragraph">Verifique que todos los datos explicitos en la planilla estén correctos para validar, firmar y aprovar su circulación.</p>
+
+        </section>
+
+        <!-- datos personales y laborales -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Datos personales y laborales
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">NOMBRE</p>
+                    <input type="text" disabled class="field__txt" value="Alex" style="width: 475px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                        <figure class="field__warning">2</figure>
+                        <figure class="field__warning">3</figure>
+                    </div>
+                    
+                </div>
+
+                <div class="field">
+                    <p class="field__name">APELLIDOS</p>
+                    <input type="text" disabled class="field__txt" value="Pineda Mesa" style="width: 475px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                        <figure class="field__warning">3</figure>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">CARNET DE IDENTIDAD</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="00121366462" style="width: 270px;">
+
+                </div>
+
+                <div class="field">
+                    <p class="field__name">NO. SOLAPÍN</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="E-45861" style="width: 250px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                        <figure class="field__warning">2</figure>
+                        <figure class="field__warning">3</figure>
+                    </div>
+                </div>
+            
+            </div>
+
+            <div class="panel__fields__2">
+
+                <div class="field">
+                    <p class="field__name">AREA</p>
+                    <input type="text" disabled class="field__txt" value="Rafael" style="width: 475px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">TIPO DE PERSONAL</p>
+                    <select name="tipo-personal" disabled id="tipo-personal" class="field__combobox" style="width: 475px;">
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Directivo">Directivo</option>
+                        <option value="Profesor">Profesor</option>
+                        <option value="Especialista">Especialista</option>
+                        <option value="Trabajador">Trabajador</option>
+                    </select>
+                </div>
+
+                <div  style="visibility: hidden;" class="personalInformation">
+
+                    <a href="#" class="personalInformation__btn">Buscar información personal</a>
+
+                    <div class="personalInformation__message">
+                        
+                        <figure class="message__picture">
+                            <img src="resources/info.svg" class="message__img">
+                        </figure>
+
+                        <p class="message__text">
+                            No se encotró el número de solapín ingresado en nuestra base de datos. Por favor verifique su número o ingrése los datos de forma manual.
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- direccion -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Dirección
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">DIRECCIÓN</p>
+                    <input type="text" disabled class="field__txt" value="Dirección" style="width: 775px;">
+                </div>
+
+                <div class="field">
+                    <p class="field__name">APARTAMENTO</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="135306" style="width: 240px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">4</figure>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">TELÉFONO</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="72654874" style="width: 240px;">
+                </div>
+            
+            </div>
+
+            <div class="panel__fields__2">
+
+                <div class="field__checkbox">
+                    <p class="field__name">MODALIDAD</p>
+                    
+                    <div class="field__checks">
+
+                        <label for="interno-rb" class="check">
+                            <input type="radio" checked name="modalidad" id="interno-rb" disabled class="check__obj">
+                            <p class="check__lbl">Interno</p>
+                        </label>
+                        
+                        <label for="externo-rb" class="check">
+                            <input type="radio" name="modalidad" id="externo-rb" disabled class="check__obj">
+                            <p class="check__lbl">Externo</p>
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- descripcion del medio tecnologico portatil -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle">
+                Descripción del medio tecnológico portátil
+            </p>
+
+            <div class="panel__fields">
+
+                <div class="field">
+                    <p class="field__name">MARCA DEL POTÁTIL</p>
+                    <input type="text" disabled class="field__txt" value="ASUS" style="width: 365px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">MODELO DEL PORTÁTIL</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="X571GT" style="width: 365px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">NO. SERIE</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="5468795124" style="width: 365px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <p class="field__name">DIRECCIÓN FÍSICA</p>
+                    <input type="text" disabled class="field__txt field__txt--spacing" value="AC:D8:C2:B5:F1" style="width: 365px;">
+
+                    <div class="warnings__container">
+                        <figure class="field__warning">1</figure>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+        </section>
+
+        <!-- area de firmas -->
+
+        <section class="firms">
+
+            <div class="firm__container">
+
+                <figure class="firm__picture">No se ha firmado todavía</figure>
+                <p class="firm__label">FIRMA DIGITAL <br> "DIRECTOR DE SEGURIDAD Y PROTECCIÓN"</p>
+
+            </div>
+
+            <div class="firm__container" style="margin-top: -37px;">
+
+                <p class="firm__date">24 de Noviembre de 2022</p>
+                <p class="firm__label">FECHA DE CREACIÓN</p>
+
+            </div>
+
+            <div class="firm__container">
+
+                <figure class="firm__picture">No se ha firmado todavía</figure>
+                <p class="firm__label">FIRMA DIGITAL <br> "DIRECTOR DE SEGURIDAD INFORMÁTICA"</p>
+
+            </div>
+
+
+        </section>
+
+        <!-- seccion de deficiencias -->
+
+        <section class="section__panel">
+
+            <p class="panel__tittle" style="margin-bottom: 0px;">
+                Deficiencias Encontradas
+            </p>
+
+            <p class="panel__description">
+                En esta sección se muestran las deficiencias detectadas automáticamente por la web.
+            </p>
+
+            <div class="panel__deficiencies">
+
+                <div class="row">
+                    <figure class="field__warning field__warning--desc">1</figure>
+                    <p class="row__text">Este usuario ya tiene registrado este dispositivo portatíl en el sistema.</p>
+                </div>
+
+                <div class="row">
+                    <figure class="field__warning field__warning--desc">2</figure>
+                    <p class="row__text">El número de solapín no existe en nuestra base de datos.</p>
+                </div>
+
+                <div class="row">
+                    <figure class="field__warning field__warning--desc">3</figure>
+                    <p class="row__text">El número de solapín corresponde a un usuario con otros datos personales.</p>
+                </div>
+
+                <div class="row">
+                    <figure class="field__warning field__warning--desc">4</figure>
+                    <p class="row__text">El número del apartamento no exite.</p>
+                </div>
+
+            </div>
+            
+        </section>
+
+
+        <!-- botones -->
+
+        <section class="buttons">
+            
+            <a id="btn_cancel" class="button__cancel">Denegar Registro</a>
+            <a id="btn_success" class="button__success">Validar Registro</a>
+
+        </section>
+
+    </main> 
+    
+    <footer class="footer">
+    
+        <div class="footer__container container">
+
+            <div class="footer__description__left">
+                
+                <div class="footer__logo">
+                    
+                    <figure class="footer__logo__picture">
+                        <img src="resources/Sin título-8.1.png" class="logo__adminetp">
+                    </figure>
+
+                    <h1 class="footer__logo__title">ADMINETP</h1>
+                </div>
+                
+                <p class="footer__paragraph">Sistema informático desarrollado para la gestión, administración y control de la información de los Equipos Tecnológicos Portátiles de estudiantes y que acceden a la Universidad de las Ciencias Informáticas de La Habana. </p>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/phone.svg" class="footer__img">
+                    </figure>
+                    <p class="line__text">+537 835 8181</p>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/link.svg"  class="footer__img">
+                    </figure>
+                    <p class="line__text">www.uci.cu</p>
+                </div>
+
+            </div>
+            
+            <div class="footer__description__right">
+                
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/facebook.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.facebook.com/universidad.uci" class="line__text">Facebook</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/intagram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://www.instagram.com/universidad.uci" class="line__text">Instagram</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/twitter.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Twitter</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/linkedin.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Linkendin</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/youtube.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">YouTube</a>
+                </div>
+
+                <div class="footer__line">
+                    <figure class="line__img">
+                        <img src="resources/telegram.svg" class="footer__img">
+                    </figure>
+                    <a href="https://twitter.com/universidad_uci" class="line__text">Telegram</a>
+                </div>
+
+                <p class="footer__uci">Universidad de las Ciencias Informáticas, La Habana, Cuba. Todos los derechos reservados.</p>
+
+            </div>
+
+        </div>
+
+        <div class="wave wave--footer"></div>
+
+    </footer>
+
+    <script src="js/validar-planilla.js"></script>
+</body>
+
+</html>

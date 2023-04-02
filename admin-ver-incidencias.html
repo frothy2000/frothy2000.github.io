@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/ver-incidencias.css">
+        <title>Administración de Medios Tecnológicos Portátiles</title>
+    </head>
+
+    <body>
+    
+        <header class="hero">
+
+            <div class="hero__logo">
+                <figure class="logo__picture">
+                    <img src="resources/Sin título-8.1.png" class="logo__img">
+                </figure>
+                <p class="logo__tittle">ADMINETP</p>
+            </div>
+    
+            <div class="hero__links">
+                
+                <div class="link ">
+                    <a id="link_inicio" class="link__text">Inicio</a>
+                </div>
+    
+                <div class="link ">
+                    <a id="link_crearRegistro" class="link__text">Crear Registro Personal</a>
+                </div>
+    
+                <div class="link ">
+                    <a id="link_verRegistros" class="link__text">Ver Registros</a>
+                </div>
+    
+                <div class="link link--active">
+                    <a id="link_verIncidencias" class="link__text">Ver Incidencias</a>
+                </div>
+    
+                <div class="link link--hidden link--menu">
+                    <a class="link__text">Administrar Privilegios<img src="resources/arrow-left.svg" class="link__img"></a>
+                    <ul class="link__submenu">
+                        <li id="asignarPrivilegio" class="submenu__item">
+                            <a  class="item__text">Asignar Privilegio</a>
+                        </li>
+                        <li id="quitarPrivilegio" class="submenu__item">
+                            <a  class="item__text">Quitar Privilegio</a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div class="link link--hidden">
+                    <a id="link_validarPlanillas" class="link__text">Validar Planillas</a>
+                </div>
+    
+                <div class="link link--hidden">
+                    <a id="link_crearIncidencia" class="link__text">Crear Incidencia</a>
+                </div>
+
+                <div class="link link--hidden">
+                    <a id="link_escanearSolapines" class="link__text">Chequear Entrada</a>
+                </div>
+    
+            </div>
+    
+            <div id="hero__user__container" class="hero__user__container">
+                
+                <div class="hero__user">
+    
+                    <div class="user__description">
+                        <p class="user__name">carlosjo</p>
+                        <p class="user__rol">Supervisor</p>
+                    </div>
+                    
+                    <figure class="user__picture">
+                        <img src="resources/user.svg" class="user__img">
+                    </figure>
+    
+                </div>
+                
+                
+            </div>
+    
+        </header>
+    
+        <header class="root">
+    
+            <p class="root__name">Principal</p>
+    
+            <figure class="root__picture">
+                <img src="resources/arrow.svg" class="root__ico">
+            </figure>
+    
+            <p class="root__name">Ver Incidencias</p>
+
+        </header>
+    
+    
+        <main class="main">
+            
+            <section class="section__top">
+    
+                <section class="section__description">
+    
+                    <p class="description__tittle">VER INCIDENCIAS</p>
+                    <p class="description__paragraph">
+                        A contiuación se muestran todas las incidencias detectadas en el último año. Seleccione una para visualizarla.
+                    </p>
+        
+                </section>
+        
+                <section class="section__search">
+        
+                    <p class="search__tittle">BÚSQUEDA:</p>
+                    <input type="text" class="search__txt" placeholder="Escribe aquí para buscar ..."/>
+        
+                </section>   
+    
+            </section>
+    
+            <section class="section__table">
+    
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO.</th><th>NOMBRE CUSTODIO</th><th>APELLIDOS CUSTODIO</th><th>USUARIO IMPLICADO</th><th>NO. SOLAPÍN</th><th>FECHA</th><th>HORA</th><th>MOTIVO</th>
+                        </tr>
+                    </thead>
+                
+                    <tbody>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        <tr class="rw">
+                            <td>1</td><td>Daniel Juan</td><td>Rodríguez Vazquez</td><td>Abraham Herrera Villavicencio</td><td>E-564212</td><td>03/12/2022</td><td>10:51 AM</td><td class="rw__motivo" style="max-width: 650px;">El estudiante intentó sacar una laptop por la puerta principal sin el registro de la misma.</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+    
+            </section>
+                 
+            <section class="section__bottom">
+    
+                <section class="navTable__container">
+    
+                    <a href="" class="navTable__previus"></a>
+                    <a class="navTable__text navTable__text--active">1</a>
+                    <a class="navTable__text">2</a>
+                    <a class="navTable__text">3</a>
+                    <a class="navTable__text">...</a>
+                    <a class="navTable__text">512</a>
+                    <a href="" class="navTable__next"></a>
+    
+                </section>
+
+                <section class="buttons">
+            
+                    <button disabled id="btn_cancel" class="button__cancel">Imprimir</button>
+                    <button disabled id="btn__success" class="button__success">Editar</button>
+        
+                </section>
+    
+            </section>
+            
+    
+        </main>
+    
+    
+        <footer class="footer">
+    
+            <div class="footer__container container">
+    
+                <div class="footer__description__left">
+                    
+                    <div class="footer__logo">
+                        
+                        <figure class="footer__logo__picture">
+                            <img src="resources/Sin título-8.1.png" class="logo__adminetp">
+                        </figure>
+    
+                        <h1 class="footer__logo__title">ADMINETP</h1>
+                    </div>
+                    
+                    <p class="footer__paragraph">Sistema informático desarrollado para la gestión, administración y control de la información de los Equipos Tecnológicos Portátiles de estudiantes y que acceden a la Universidad de las Ciencias Informáticas de La Habana. </p>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/phone.svg" class="footer__img">
+                        </figure>
+                        <p class="line__text">+537 835 8181</p>
+                    </div>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/link.svg"  class="footer__img">
+                        </figure>
+                        <p class="line__text">www.uci.cu</p>
+                    </div>
+    
+                </div>
+                
+                <div class="footer__description__right">
+                    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/facebook.svg" class="footer__img">
+                        </figure>
+                        <a href="https://www.facebook.com/universidad.uci" class="line__text">Facebook</a>
+                    </div>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/intagram.svg" class="footer__img">
+                        </figure>
+                        <a href="https://www.instagram.com/universidad.uci" class="line__text">Instagram</a>
+                    </div>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/twitter.svg" class="footer__img">
+                        </figure>
+                        <a href="https://twitter.com/universidad_uci" class="line__text">Twitter</a>
+                    </div>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/linkedin.svg" class="footer__img">
+                        </figure>
+                        <a href="https://twitter.com/universidad_uci" class="line__text">Linkendin</a>
+                    </div>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/youtube.svg" class="footer__img">
+                        </figure>
+                        <a href="https://twitter.com/universidad_uci" class="line__text">YouTube</a>
+                    </div>
+    
+                    <div class="footer__line">
+                        <figure class="line__img">
+                            <img src="resources/telegram.svg" class="footer__img">
+                        </figure>
+                        <a href="https://twitter.com/universidad_uci" class="line__text">Telegram</a>
+                    </div>
+    
+                    <p class="footer__uci">Universidad de las Ciencias Informáticas, La Habana, Cuba. Todos los derechos reservados.</p>
+    
+                </div>
+    
+            </div>
+    
+            <div class="wave wave--footer"></div>
+    
+        </footer>
+    
+
+        <script src="js/ver-incidencias.js"></script>
+    </body>
+
+</html>
